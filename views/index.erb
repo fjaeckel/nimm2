@@ -1,0 +1,23 @@
+<!-- Navigation -->
+<div id="navigation" align="left" width="100%">
+<nav>
+  <ul>
+          <% require 'pp' %>
+    <% categories.each do |cat| %>
+      <li><a href="#"><%= cat[:name] %></a>
+        <ul>
+        <% sites.each do |site| %>
+          <% if site[:category_id] == cat[:id] %>
+            <li><a href="<%= site[:url] %>" target="_lol"><%= site[:title] %></a></li>
+          <% end %>
+        <% end %>
+        </ul>
+      </li>
+    <% end %>
+    <li><a href="#add">Add Link</a></li>
+  </ul>
+</nav>
+<br><br>
+</div>
+<!-- Body -->
+<iframe id="lol" name="_lol" frameborder=0 scrolling=auto></iframe>

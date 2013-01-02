@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+PATH=$PATH:./vendor/bundle/bin:./script
+bundle exec thin -p $PORT -R config.ru start
