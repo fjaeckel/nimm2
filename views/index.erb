@@ -1,8 +1,61 @@
+<script>
+$(document).ready(function() {
+  $("#add_link").click(function() {
+      $("#addbox").overlay().load();
+  });
+
+    // select the overlay element - and "make it an overlay"
+  $("#addbox").overlay({
+
+    // custom top position
+    top: 50,
+
+    // some mask tweaks suitable for addbox-looking dialogs
+    mask: {
+
+    // you might also consider a "transparent" color for the mask
+    color: '#fff',
+
+    // load mask a little faster
+    loadSpeed: 200,
+
+    // very transparent
+    opacity: 0.5
+    },
+
+    // disable this for modal dialog-type of overlays
+    closeOnClick: true,
+
+    // load it immediately after the construction
+    load: false
+
+    });
+    });
+</script>
+
+<!-- facebook dialog -->
+<div id="addbox">
+  <div>
+    <h2>Add a new link</h2>
+    <form action="/add" method="POST">
+      <label id="title"><b>Title: </b></label><input type="text" id="title" name="title"></input><br />
+      <label id="url"><b>URL: </b></label><input type="text" id="url" name="url"></input><br />
+      <label id="category"><b>Category:</b></label>
+        <select id="category" name="category">
+          <% categories.each do |cat| %>
+          <option value="<%= cat[:id] %>"><%= cat[:name] %></option>
+          <%end %>
+        </select> <a href="/category">(new category)</a><br/>
+      <input type="submit" value="Submit">
+    </form>
+    <button class="close"> Close </button>
+  </div>
+</div>
+
 <!-- Navigation -->
 <div id="navigation" align="left" width="100%">
 <nav>
   <ul>
-          <% require 'pp' %>
     <% categories.each do |cat| %>
       <li><a href="#"><%= cat[:name] %></a>
         <ul>
@@ -14,7 +67,7 @@
         </ul>
       </li>
     <% end %>
-    <li><a href="#add">Add Link</a></li>
+    <li><a href="#add" id="add_link">Add Link</a></li>
   </ul>
 </nav>
 <br><br>
