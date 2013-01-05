@@ -23,6 +23,13 @@ get '/' do
       }
 end
 
+get '/category' do
+  if params[:name]
+    Category.create(:name => params[:name])
+  end
+  erb :category
+end
+
 # post all new links here
 post '/add' do
   if params[:title] && params[:url] && params[:category]
