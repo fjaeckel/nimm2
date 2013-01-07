@@ -14,11 +14,11 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,addre
 }
 
 a {
-  color: #fff;
+  color: #000;
 }
 
 a:hover {
-  color: #ddd;
+  color: #888;
 }
 
 body {
