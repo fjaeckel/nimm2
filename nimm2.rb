@@ -8,10 +8,6 @@ require_relative 'lib/models.rb'
 require 'rubygems'
 require 'sinatra'
 
-# create the default categories Monitoring + Dashboards
-Category.create(:name => "Monitoring")
-Category.create(:name => "Dashboards")
-
 get '/' do
   sites = Site.all
   categories = Category.all
