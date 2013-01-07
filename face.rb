@@ -8,10 +8,9 @@ require_relative 'lib/models.rb'
 require 'rubygems'
 require 'sinatra'
 
-category1 = Category.create(:name => "comedy")
-category2 = Category.create(:name => "monitoring")
-Site.create(:title => "nom nom nom", :url => "http://www.nimm2.de/", :category => category1)
-Site.create(:title => "graphite", :url => "http://graphite.wikidot.com/", :category => category2)
+# create the default categories Monitoring + Dashboards
+Category.create(:name => "Monitoring")
+Category.create(:name => "Dashboards")
 
 get '/' do
   sites = Site.all

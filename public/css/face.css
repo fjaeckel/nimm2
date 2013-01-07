@@ -52,9 +52,9 @@ body {
 
 #navigation {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, bold;
-  font-size:14px;
-  padding: 10px 10px;
-  height: 30px;
+  font-size:10px;
+  padding: 5px 5px;
+  height: 23px;
   width: 100%;
   color: #fff;
   background: #FF6600;
@@ -75,7 +75,7 @@ nav ul {
   background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
   background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
   box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
-  padding: 0 20px;
+  padding: 0 10px;
   border-radius: 10px;  
   list-style: none;
   position: relative;
@@ -99,7 +99,7 @@ nav ul li:hover {
   }
 
 nav ul li a {
-  display: block; padding: 5px 5px;
+  display: block; padding: 2px 2px;
   color: #757575; text-decoration: none;
 }
 
@@ -110,8 +110,8 @@ nav ul ul {
 
 nav ul ul li {
   float: none; 
-  border-top: 1px solid #6b727c;
-  border-bottom: 1px solid #575f6a;
+  border-top: 0px solid #6b727c;
+  border-bottom: 0px solid #575f6a;
   position: relative;
 }
 
